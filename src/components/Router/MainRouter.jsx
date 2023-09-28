@@ -4,7 +4,7 @@ import { privateRoutes, publicRoutes } from '.';
 import { AuthContext } from '../../context/context';
 import Error from '../../pages/Error/Error';
 import Login from '../../pages/Login/Login';
-import Tasks from '../../pages/Tasks/Tasks';
+import Tasks from '../../pages/Tasks/Tasks'; 
 
 const Router = () => {
 	const {isAuth} = useContext(AuthContext);

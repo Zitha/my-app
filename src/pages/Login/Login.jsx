@@ -26,10 +26,7 @@ function Login() {
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-          <form
-            className="space-y-6"
-            onSubmit={login}
-          >
+          <form className="space-y-6" onSubmit={login} >
             <div>
               <label htmlFor="login" className="block text-sm font-medium text-gray-700">
                 Login
@@ -102,37 +99,6 @@ function Login() {
                 <span className="px-2 bg-white text-gray-500">Or continue with</span>
               </div>
             </div>
-
-            {/*  <div className="mt-6 grid grid-cols-3 gap-3">
-              <div>
-                <Link
-                  to="/login"
-                  className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
-                >
-                  <span className="sr-only">Sign in with Vk</span>
-                  <SlSocialVkontakte className="w-5 h-5" />
-                </Link>
-              </div>
-
-              <div>
-            <Link
-              to="/login"
-              className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
-            >
-              <span className="sr-only">Sign in with Telegram</span>
-              <FaTelegramPlane className="w-5 h-5"/>
-            </Link>
-          </div>
-					<div>
-            <Link
-              to="/login"
-              className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
-            >
-              <span className="sr-only">Sign in with GitHub</span>
-              <AiFillGithub className="w-5 h-5"/>
-            </Link>
-          </div> 
-            </div>*/}
           </div>
         </div>
       </div>

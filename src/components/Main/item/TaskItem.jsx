@@ -5,6 +5,7 @@ import { BsTrash } from 'react-icons/bs';
 const TaskItem = ({ task, changeTask, removeTask }) => {
 	const today = new Date(); 
 	const [isPastDue, setIsPastDue] = React.useState(new Date(task.dueDate) < today); 
+	
 	return (
 		<div className=' flex items-center justify-between border-2  border-black  mb-4 rounded-2xl bg-white p-5 w-full text-black'>
 
