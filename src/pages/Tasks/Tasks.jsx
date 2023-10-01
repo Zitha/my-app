@@ -51,7 +51,6 @@ const Tasks = () => {
 		localStorage.setItem("tasks", JSON.stringify(dd));
 	}
 
-
 	const changeTask = id => {
 		const copy = [...tasks]
 		const current = copy.find(t => t.id === id)
@@ -70,7 +69,7 @@ const Tasks = () => {
 
 
 	return (
-		<div className=' text-black w-3/5 mx-auto'>
+		<div className="z-[1] p-6 w-screen h-full  relative">
 			<CreateTask updateTask={updateTask} />
 			<br />
 			<hr />

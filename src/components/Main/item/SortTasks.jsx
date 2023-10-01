@@ -9,7 +9,7 @@ const SortTasks = ({ handleSortBy }) => {
   };
 
   return (
-    <div className='flex pb-4'>
+    <div className='flex pb-12'>
       <button
         className={`bg-black text-white font-bold py-2 px-4 rounded-l ${activeButton === 'All' ? 'bg-[#3c3c3c]' : ''}`}
         onClick={() => handleButtonClick('All')}

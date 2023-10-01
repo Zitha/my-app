@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const Pomodoro = () => {
-    const [minutesRemaining, setMinutesRemaining] = useState(1);
+    const [minutesRemaining, setMinutesRemaining] = useState(25);
     const [secondsRemaining, setSecondsRemaining] = useState(0);
     const [isTimerRunning, setIsTimerRunning] = useState(false);
 
@@ -29,10 +29,11 @@ const Pomodoro = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8 
+        w-full  border-b-[4px] border-black">
             <div className="flex flex-row items-center mt-4 sm:mx-auto sm:w-full sm:max-w-md">
                 <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-                   Pomodoro 
+                    Pomodoro
                 </h2>
             </div>
             <div className="text-4xl font-bold sm:mx-auto sm:w-full sm:max-w-md">

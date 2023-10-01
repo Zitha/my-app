@@ -5,12 +5,11 @@ const CreateTask = ({ updateTask }) => {
 	const [dueDate, setDueDate] = useState('');
 
 	const addTask = (title, dueDate) => {
-		if (title !== '' && dueDate !== '')
-		{
+		if (title !== '' && dueDate !== '') {
 			updateTask(title, dueDate);
 			setTitle('');
 			setDueDate('');
-		} 
+		}
 		setTitle('')
 	}
 
@@ -35,8 +34,8 @@ const CreateTask = ({ updateTask }) => {
 				/>
 			</div>
 			<div className='flex items-center justify-between mb-4 px-5 py-3 mt-20 w-full'>
-				<button className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm
-				 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+				<button
+					className='relative m-auto rounded-full bg-[#028ce8] border-[3px] border-black  text-3xl px-6 flex flex-row justify-center items-center gap-1'
 					onClick={() => addTask(title, dueDate)}>
 					Add Task
 				</button>

@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef, useContext } from 'react';
 import { BsListCheck } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import { AuthContext } from '../../context/context'
+import logo from '../../assets/logo.png';
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,61 +35,50 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-xl w-full py-2 px-3 flex items-center justify-between">
-      <div className='mx-auto'>
-        <Link to="/tasks" className="text-white font-bold text-xl">
-          <BsListCheck className='text-black w-10 h-10 mx-auto' />
+    <div className="flex flex-row justify-between items-center pt-2 w-screen mb-3 pr-4">
+      <Link>
+        <div className='flex flex-row justify-center items-center'>
+          <img src={logo} alt="logo" width={50} height={30} className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
+          <p className='font-Karla text-xl lg:text-4xl font-bold -mx-1 lg:-mx-0'>Studa</p>
+        </div>
+      </Link>
+      <div className="h-[35px] lg:w+[400px] lg:h-[69px] font-Inter text-xs lg:text-2xl flex flex-row justify-center items-center gap-4 font-semibold">
+        <Link to="/tasks">
+          <div className="border-[3px] border-black rounded-full w-[80px] lg:w-[150px]">
+            <p className="text-xs text-center lg:text-xl">
+              Tasks
+            </p>
+          </div></Link>
+        <Link to="/motivation">
+          <div className="border-[3px] border-black rounded-full w-[80px] lg:w-[150px]">
+            <p className="text-xs text-center lg:text-xl">
+              Positive Vibes
+            </p>
+          </div>
+        </Link>
+        <Link to="/pomodoro">
+          <div className="border-[3px] border-black rounded-full w-[80px] lg:w-[150px]">
+            <p className="text-xs text-center lg:text-xl">
+              Pomodoro
+            </p>
+          </div>
+        </Link>
+        <Link to="/flashcards">
+          <div className="border-[3px] border-black rounded-full w-[80px] lg:w-[150px]">
+            <p className="text-xs text-center lg:text-xl">
+              Flash Cards
+            </p>
+          </div>
+        </Link>
+        <Link to="/notes">
+          <div className="border-[3px] border-black rounded-full w-[80px] lg:w-[150px]">
+            <p className="text-xs text-center lg:text-xl">
+              Notes Taker
+            </p>
+          </div>
         </Link>
       </div>
-      <div className="relative" ref={menuRef}>
-        <button
-          type="button"
-          className="text-gray-400 focus:outline-none"
-          onClick={handleMenuToggle}
-        >
-          <img src="https://i.pinimg.com/564x/97/91/21/9791216c502a370f4d819f0f8d51b996.jpg" alt="" className="w-8 h-8 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
-        </button>
-        {isMenuOpen && (
-          <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
-            <Link to="/tasks"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"   >
-              Tasks
-            </Link>
-            <Link to="/profile"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-            >
-              Profile
-            </Link>
-            <Link to="/motivation"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-            >
-              Motivational Quotes
-            </Link>
-            <Link to="/pomodoro"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-            >
-              Pomodoro
-            </Link>
-            <Link to="/flashcards "
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-            >
-              Flash Cards
-            </Link>
-            <Link to="/notes "
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-            >
-              Notes Takeer
-            </Link>
-            <Link to="/login"
-              onClick={logout}
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-            >
-              Logout
-            </Link>
-          </div>
-        )}
-      </div>
-    </nav>
+    </div>
   );
 };
 
