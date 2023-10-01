@@ -29,8 +29,7 @@ const Pomodoro = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8 
-        w-full  border-b-[4px] border-black">
+        <div className="slide-in-fwd-center flex flex-col justify-center items-center gap-3 w-screen h-auto p-2 lg:bg-white bg-[#88CFE8]">
             <div className="flex flex-row items-center mt-4 sm:mx-auto sm:w-full sm:max-w-md">
                 <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
                     Pomodoro
