@@ -25,8 +25,7 @@ const NotesTaker = () => {
                     date={note.date}
                     currentNoteId={setCurrentNoteId}
                     change={setClicked} />));
-        }
-        //setData(JSON.parse(localStorage.getItem('notes')));
+        } 
     }, [data])
 
     return (

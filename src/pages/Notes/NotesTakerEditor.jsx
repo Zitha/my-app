@@ -16,20 +16,12 @@ const NotesTakerEditor = (props) => {
         const newNote = { id: nanoid(), title: title, body: body, date: new Date().toLocaleDateString(), currentColor: currentColor }
         notes = [newNote, ...notes]
         localStorage.setItem('notes', JSON.stringify(notes))
-        setData(notes)
+        setData(notes);
+        saveNote();
     }
 
-    const saveNote = () => {
-        const currentNote = data.filter((note) => note.id === props.currentNoteId)
-        console.log(currentNote)
-        currentNote[0].title = title
-        currentNote[0].body = body
-        currentNote[0].currentColor = currentColor
-        let Notes = data.filter((note) => note.id !== props.currentNoteId)
-        Notes = [currentNote[0], ...Notes]
-        localStorage.setItem('notes', JSON.stringify(Notes))
-        setData(Notes)
-        setTitle("Untitled")
+    const saveNote = () => { 
+        setTitle("")
         setBody("")
         props.change(false)
     }
@@ -84,7 +76,7 @@ const NotesTakerEditor = (props) => {
                     />
                 </form>
                 <button
-                    onClick={() => { createNewNote(); saveNote(); }}
+                    onClick={() => { createNewNote(); }}
                 >
                     <FaSave />
                 </button>
