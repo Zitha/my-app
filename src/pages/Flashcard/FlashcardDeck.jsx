@@ -4,7 +4,7 @@ import Flashcard from "./Flashcard";
 const flashcards = [
     {
         id: 1,
-        front: "A warm wind whcih blows from interior of South Africa towards the east coast in winter is the?",
+        front: "A warm wind which blows from interior of South Africa towards the east coast in winter is the?",
         back: "Paris",
         duration: 60,
     },
