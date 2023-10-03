@@ -77,6 +77,13 @@ const Navbar = () => {
             </p>
           </div>
         </Link>
+        <Link to="/hub">
+          <div className="border-[3px] border-black rounded-full w-[80px] lg:w-[150px]">
+            <p className="text-xs text-center lg:text-xl">
+              Creativity Hub
+            </p>
+          </div>
+        </Link>
       </div>
     </div>
   );

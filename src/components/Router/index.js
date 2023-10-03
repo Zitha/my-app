@@ -5,6 +5,7 @@ import Motivation from '../../pages/Motivation/Motivation';
 import Pomodoro from '../../pages/Pomodoro/Pomodoro';
 import FlashcardDeck from '../../pages/Flashcard/FlashcardDeck';
 import NotesTaker from '../../pages/Notes/NotesTaker';
+import Hub from '../../pages/Hub/Hub';
 
 export const privateRoutes = [
 	{ path: '/tasks', element: <Tasks />, exact: true },
@@ -13,7 +14,8 @@ export const privateRoutes = [
 	{ path: '/motivation', element: <Motivation />, exact: true },
 	{ path: '/pomodoro', element: <Pomodoro />, exact: true },
 	{ path: '/flashcards', element: <FlashcardDeck />, exact: true },
-	{ path: '/notes', element: <NotesTaker />, exact: true } 
+	{ path: '/notes', element: <NotesTaker />, exact: true },
+	{ path: '/hub', element: <Hub />, exact: true }
 ]
 
 export const publicRoutes = [
