@@ -80,7 +80,7 @@ const Navbar = () => {
         <Link to="/hub">
           <div className="border-[3px] border-black rounded-full w-[80px] lg:w-[150px]">
             <p className="text-xs text-center lg:text-xl">
-              Creativity Hub
+              Learning Hub
             </p>
           </div>
         </Link>
